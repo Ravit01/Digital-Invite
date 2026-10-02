@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIP Party Pass - Exclusive Invitation</title>
+    <style>
+        :root {
+            --bg-dark: #121214;
+            --card-bg: #1a1a1e;
+            --accent-neon: #ff2a6d;
+            --accent-gold: #f39c12;
+            --text-light: #f0f0f5;
+            --text-muted: #9999aa;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            margin: 0;
+            padding: 20px 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .invitation-card {
+            background: var(--card-bg);
+            max-width: 480px;
+            width: 100%;
+            padding: 35px 25px;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(255, 42, 109, 0.15);
+            border: 1px solid rgba(255, 42, 109, 0.3);
+            text-align: center;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        /* Party Header Badge */
+        .party-badge {
+            display: inline-block;
+            background: rgba(255, 42, 109, 0.1);
+            color: var(--accent-neon);
+            font-size: 11px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding: 6px 14px;
+            border-radius: 20px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(255, 42, 109, 0.3);
+        }
+
+        /* Host Photo / Graphic */
+        .photo-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .photo-frame {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid var(--accent-gold);
+            box-shadow: 0 0 20px rgba(243, 156, 18, 0.3);
+            background: #222;
+        }
+
+        .photo-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        h1 {
+            color: var(--text-light);
+            margin: 10px 0 5px 0;
+            font-size: 28px;
+            letter-spacing: 0.5px;
+        }
+
+        .subtext {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            line-height: 1.4;
+        }
+
+        /* VIP Guest Name Box */
+        .guest-box {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 14px 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+            border: 1px dashed var(--accent-gold);
+        }
+
+        .guest-box p {
+            margin: 0 0 4px 0;
+            font-size: 11px;
+            color: var(--accent-gold);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: bold;
+        }
+
+        .guest-box h3 {
+            color: var(--text-light);
+            margin: 0;
+            font-size: 20px;
+        }
+
+        /* Live Countdown Timer */
+        .countdown-container {
+            display: flex;
+            justify-content: space-around;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 14px;
+            border-radius: 12px;
+            margin: 20px 0;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .time-box {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .time-box span:first-child {
+            font-size: 22px;
+            font-weight: bold;
+            color: var(--accent-neon);
+        }
+
+        .time-box span:last-child {
+            font-size: 10px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Event Details */
+        .details-box {
+            text-align: left;
+            background: rgba(255, 255, 255, 0.02);
+            padding: 16px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            margin-top: 20px;
+        }
+
+        .details-box h4 {
+            margin: 0 0 10px 0;
+            color: var(--accent-gold);
+            font-size: 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding-bottom: 6px;
+            letter-spacing: 0.5px;
+        }
+
+        .details-box p {
+            margin: 6px 0;
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        .details-box strong {
+            color: var(--text-light);
+        }
+
+        .map-btn {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            background: linear-gradient(135deg, var(--accent-neon), #d91450);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 12px 16px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: bold;
+            transition: opacity 0.3s;
+            box-shadow: 0 4px 15px rgba(255, 42, 109, 0.3);
+        }
+
+        .map-btn:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="invitation-card">
+        
+        <!-- Party Badge -->
+        <div class="party-badge">✨ Exclusive VIP Pass ✨</div>
+        
+        <!-- Host/Party Image -->
+        <div class="photo-container">
+            <div class="photo-frame">
+                <!-- Replace with host or party theme image direct link -->
+                <img src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?w=300&auto=format&fit=crop&q=80" alt="Party Vibe">
+            </div>
+        </div>
+
+        <h1>Aarav's 25th Birthday Bash</h1>
+        <div class="subtext">Good music, great drinks, and better company. Let's make it a night to remember!</div>
+        
+        <!-- VIP Guest Name Box (Dynamic URL Integration) -->
+        <div class="guest-box">
+            <p>Exclusive Access For</p>
+            <h3 id="guestName">VIP Guest</h3>
+        </div>
+
+        <!-- Live Countdown Timer -->
+        <div class="countdown-container">
+            <div class="time-box">
+                <span id="days">00</span>
+                <span>Days</span>
+            </div>
+            <div class="time-box">
+                <span id="hours">00</span>
+                <span>Hours</span>
+            </div>
+            <div class="time-box">
+                <span id="minutes">00</span>
+                <span>Mins</span>
+            </div>
+            <div class="time-box">
+                <span id="seconds">00</span>
+                <span>Secs</span>
+            </div>
+        </div>
+
+        <!-- Party Venue & Time -->
+        <div class="details-box">
+            <h4>🥂 Party Details</h4>
+            <p><strong>Date:</strong> Saturday, October 24, 2026</p>
+            <p><strong>Time:</strong> 8:00 PM Onwards</p>
+            <p><strong>Dress Code:</strong> Smart Casual / Party Chic</p>
+            <p><strong>Venue:</strong> The Penthouse Lounge, Connaught Place, New Delhi</p>
+        </div>
+
+        <a href="https://maps.google.com/?q=Connaught+Place+New+Delhi" target="_blank" class="map-btn">Get Venue Directions 🗺️</a>
+
+    </div>
+
+    <script>
+        // 1. Dynamic Guest Name Script (?name=Rahul)
+        const params = new URLSearchParams(window.location.search);
+        const visitorName = params.get('name');
+        
+        if (visitorName) {
+            document.getElementById('guestName').innerText = decodeURIComponent(visitorName);
+        } else {
+            document.getElementById('guestName').innerText = "Our Special Guest";
+        }
+
+        // 2. Countdown Timer Script
+        const partyDate = new Date("October 24, 2026 20:00:00").getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = partyDate - now;
+
+            if (distance < 0) {
+                document.querySelector(".countdown-container").innerHTML = "<h3 style='color:var(--accent-neon); width:100%; margin:0;'>The Party Has Started! Let's Go 🥂</h3>";
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerText = String(days).padStart(2, '0');
+            document.getElementById("hours").innerText = String(hours).padStart(2, '0');
+            document.getElementById("minutes").innerText = String(minutes).padStart(2, '0');
+            document.getElementById("seconds").innerText = String(seconds).padStart(2, '0');
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+    </script>
+</body>
+</html>
