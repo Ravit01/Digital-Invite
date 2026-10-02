@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rahul Weds Ananya - Wedding Invitation</title>
+    <style>
+        :root {
+            --primary-maroon: #7a0010;
+            --accent-gold: #d4af37;
+            --bg-cream: #fcf8f2;
+            --card-bg: #fffdf9;
+            --text-dark: #2c2c2c;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: var(--bg-cream);
+            color: var(--text-dark);
+            margin: 0;
+            padding: 20px 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .invitation-card {
+            background: var(--card-bg);
+            max-width: 480px;
+            width: 100%;
+            padding: 35px 25px;
+            border-radius: 16px;
+            box-shadow: 0 12px 35px rgba(122, 0, 16, 0.12);
+            border: 3px double var(--accent-gold);
+            text-align: center;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        /* Lord Ganesha Section */
+        .ganesha-header {
+            margin-bottom: 15px;
+        }
+
+        .ganesha-icon {
+            width: 70px;
+            height: auto;
+            filter: drop-shadow(0px 2px 4px rgba(212, 175, 55, 0.4));
+        }
+
+        .ganesha-text {
+            color: var(--primary-maroon);
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .tagline {
+            font-size: 13px;
+            color: #777;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 20px;
+        }
+
+        /* Couple Photos Section */
+        .couple-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .photo-frame {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid var(--accent-gold);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+            background: #f4efe6;
+        }
+
+        .photo-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .ampersand {
+            font-size: 26px;
+            color: var(--accent-gold);
+            font-family: 'Georgia', serif;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        h1 {
+            color: var(--primary-maroon);
+            margin: 10px 0 5px 0;
+            font-size: 30px;
+        }
+
+        .subtext {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 20px;
+            line-height: 1.4;
+        }
+
+        /* VIP Guest Greeting Box */
+        .guest-box {
+            background: #fff9e6;
+            padding: 14px 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border: 1px dashed var(--accent-gold);
+        }
+
+        .guest-box p {
+            margin: 0 0 4px 0;
+            font-size: 12px;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .guest-box h3 {
+            color: var(--primary-maroon);
+            margin: 0;
+            font-size: 21px;
+        }
+
+        /* Countdown Timer */
+        .countdown-container {
+            display: flex;
+            justify-content: space-around;
+            background: #fbf3f3;
+            padding: 14px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border: 1px solid #f0dada;
+        }
+
+        .time-box {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .time-box span:first-child {
+            font-size: 22px;
+            font-weight: bold;
+            color: var(--primary-maroon);
+        }
+
+        .time-box span:last-child {
+            font-size: 10px;
+            color: #777;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Event Details & Map Button */
+        .details-box {
+            text-align: left;
+            background: #ffffff;
+            padding: 18px;
+            border-radius: 10px;
+            border: 1px solid #eedcce;
+            margin-top: 20px;
+        }
+
+        .details-box h4 {
+            margin: 0 0 10px 0;
+            color: var(--primary-maroon);
+            font-size: 16px;
+            border-bottom: 1px solid #f2e1d4;
+            padding-bottom: 5px;
+        }
+
+        .details-box p {
+            margin: 6px 0;
+            font-size: 14px;
+            color: #444;
+        }
+
+        .map-btn {
+            display: block;
+            text-align: center;
+            margin-top: 15px;
+            background: var(--primary-maroon);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 16px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: bold;
+            transition: background 0.3s;
+            border: 1px solid var(--accent-gold);
+        }
+
+        .map-btn:hover {
+            background: #57000b;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="invitation-card">
+        
+        <!-- Lord Ganesha Header -->
+        <div class="ganesha-header">
+            <img src="https://i.ibb.co/3mLhXyjc/ganesh.png" alt="Lord Ganesha" class="ganesha-icon">
+            <div class="ganesha-text">|| Shree Ganeshaya Namah ||</div>
+        </div>
+
+        <div class="tagline">Together With Their Families</div>
+        
+        <!-- Couple Photos -->
+        <div class="couple-section">
+            <div class="photo-frame">
+                <img src="https://i.ibb.co/6f2hBs8/groom-jpg.png" alt="Groom">
+            </div>
+            <div class="ampersand">&</div>
+            <div class="photo-frame">
+                <img src="https://i.ibb.co/hFvdyrGL/bride-jpg.png" alt="Bride">
+            </div>
+        </div>
+
+        <h1>Rahul & Ananya</h1>
+        <div class="subtext">Invite you to join them in celebrating their wedding day and new beginning.</div>
+        
+        <!-- VIP Guest Name Box -->
+        <div class="guest-box">
+            <p>Special Invitation For</p>
+            <h3 id="guestName">Valued Guest</h3>
+        </div>
+
+        <!-- Live Countdown Timer -->
+        <div class="countdown-container">
+            <div class="time-box">
+                <span id="days">00</span>
+                <span>Days</span>
+            </div>
+            <div class="time-box">
+                <span id="hours">00</span>
+                <span>Hours</span>
+            </div>
+            <div class="time-box">
+                <span id="minutes">00</span>
+                <span>Mins</span>
+            </div>
+            <div class="time-box">
+                <span id="seconds">00</span>
+                <span>Secs</span>
+            </div>
+        </div>
+
+        <!-- Venue & Directions -->
+        <div class="details-box">
+            <h4>📍 Event Details</h4>
+            <p><strong>Date:</strong> December 15, 2026</p>
+            <p><strong>Time:</strong> 7:00 PM Onwards</p>
+            <p><strong>Venue:</strong> The Grand Royale Palace, MG Road, New Delhi</p>
+            <a href="https://maps.google.com/?q=New+Delhi" target="_blank" class="map-btn">Get Directions on Google Maps 🗺️</a>
+        </div>
+
+    </div>
+
+    <script>
+        // 1. URL Query Parameter script for Dynamic Guest Name
+        const params = new URLSearchParams(window.location.search);
+        const visitorName = params.get('name');
+        
+        if (visitorName) {
+            document.getElementById('guestName').innerText = decodeURIComponent(visitorName);
+        } else {
+            document.getElementById('guestName').innerText = "Our Respected Guest";
+        }
+
+        // 2. Real-Time Countdown Timer Script
+        const weddingDate = new Date("December 15, 2026 19:00:00").getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = weddingDate - now;
+
+            if (distance < 0) {
+                document.querySelector(".countdown-container").innerHTML = "<h3 style='color:var(--primary-maroon); width:100%; margin:0;'>The Wedding Celebrations Have Begun! 🎉</h3>";
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerText = String(days).padStart(2, '0');
+            document.getElementById("hours").innerText = String(hours).padStart(2, '0');
+            document.getElementById("minutes").innerText = String(minutes).padStart(2, '0');
+            document.getElementById("seconds").innerText = String(seconds).padStart(2, '0');
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+    </script>
+</body>
+</html>
