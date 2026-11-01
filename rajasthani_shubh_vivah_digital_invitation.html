@@ -1,0 +1,1197 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ranveer & Sunaina — Shubh Vivah Digital Invitation</title>
+    
+    <!-- Open Graph for WhatsApp & Social Preview -->
+    <meta property="og:title" content="Ranveer & Sunaina — Royal Shubh Vivah Invitation">
+    <meta property="og:description" content="We solicit your gracious presence at the wedding celebrations of Ranveer Singh & Sunaina Kumari in Udaipur, Rajasthan.">
+    <meta property="og:image" content="https://placehold.co/1200x630/B85D4B/FAF5EE?text=Ranveer+%26+Sunaina+Shubh+Vivah">
+    <meta property="og:type" content="website">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Cormorant Garamond, Jost, Noto Serif Devanagari, Hind -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Hind:wght@300;400;500;600;700&family=Jost:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Noto+Serif+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        sandstone: {
+                            DEFAULT: '#FAF5EE',
+                            dark: '#EFE5D8',
+                            light: '#FFFDF9'
+                        },
+                        champagne: '#F1E6D6',
+                        terracotta: {
+                            DEFAULT: '#B85D4B',
+                            dark: '#8C3D2E',
+                            light: '#D97D6C'
+                        },
+                        brass: {
+                            DEFAULT: '#C29B58',
+                            dark: '#967332',
+                            light: '#E5C487',
+                            shimmer: '#F7E7C4'
+                        },
+                        marigold: '#F7E8D0',
+                        espresso: '#2E241F'
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['"Jost"', 'sans-serif'],
+                        devanagariSerif: ['"Noto Serif Devanagari"', 'serif'],
+                        devanagariSans: ['"Hind"', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Base Palette & CSS Tokens */
+        :root {
+            --bg-sandstone: #FAF5EE;
+            --color-brass: #C29B58;
+            --color-terracotta: #B85D4B;
+            --color-espresso: #2E241F;
+        }
+
+        body {
+            background-color: var(--bg-sandstone);
+            color: var(--color-espresso);
+            font-family: 'Jost', 'Hind', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .lang-hi {
+            font-family: 'Hind', sans-serif;
+        }
+        .lang-hi h1, .lang-hi h2, .lang-hi h3, .lang-hi h4, .lang-hi .font-serif {
+            font-family: 'Noto Serif Devanagari', serif;
+        }
+
+        /* Sandstone Handmade Paper Texture */
+        .sandstone-texture {
+            background-color: #FAF5EE;
+            background-image: 
+                radial-gradient(#E8DCCD 0.75px, transparent 0.75px), 
+                radial-gradient(#E8DCCD 0.75px, #FAF5EE 0.75px);
+            background-size: 32px 32px;
+            background-position: 0 0, 16px 16px;
+        }
+
+        /* Rajasthani Brass Jali Lattice Pattern */
+        .jali-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M24 0 L48 24 L24 48 L0 24 Z' fill='none' stroke='%23C29B58' stroke-width='0.8' opacity='0.35'/%3E%3Cpath d='M24 8 L40 24 L24 40 L8 24 Z' fill='none' stroke='%23C29B58' stroke-width='0.5' opacity='0.3'/%3E%3Ccircle cx='24' cy='24' r='4' fill='none' stroke='%23C29B58' stroke-width='0.6' opacity='0.4'/%3E%3C/svg%3E");
+        }
+
+        /* 3D Gate Door Opening Animations */
+        .gate-perspective {
+            perspective: 1500px;
+        }
+        .gate-door-left {
+            transform-origin: left center;
+            transition: transform 1.9s cubic-bezier(0.77, 0, 0.175, 1);
+        }
+        .gate-door-right {
+            transform-origin: right center;
+            transition: transform 1.9s cubic-bezier(0.77, 0, 0.175, 1);
+        }
+        .gate-open .gate-door-left {
+            transform: rotateY(-118deg);
+        }
+        .gate-open .gate-door-right {
+            transform: rotateY(118deg);
+        }
+        .gate-open .gate-seal {
+            opacity: 0;
+            transform: scale(0.35);
+            transition: all 0.7s ease-out;
+        }
+
+        /* Brass Shimmer Animation */
+        @keyframes brassShimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+        .brass-shimmer-text {
+            background: linear-gradient(135deg, #967332 0%, #F7E7C4 30%, #C29B58 50%, #F7E7C4 70%, #967332 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 200% auto;
+            animation: brassShimmer 7s linear infinite;
+        }
+
+        /* Rotating Suryamandala Background */
+        @keyframes rotateMandala {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .rotating-mandala {
+            animation: rotateMandala 110s linear infinite;
+        }
+
+        /* Canvas Particle Overlay */
+        #petal-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 40;
+        }
+
+        /* Scroll Reveal Animation Classes */
+        .reveal-element {
+            opacity: 0;
+            transform: translateY(28px) scale(0.98);
+            filter: blur(4px);
+            transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1), filter 1s ease-out;
+            will-change: opacity, transform, filter;
+        }
+        .reveal-element.active {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+            filter: blur(0px);
+        }
+
+        /* Custom Brass Scrollbar */
+        ::-webkit-scrollbar {
+            width: 7px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FAF5EE;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #C29B58;
+            border-radius: 4px;
+        }
+
+        /* Print Layout Rules */
+        @media print {
+            #gate-overlay, #top-nav-bar, .no-print, #petal-canvas {
+                display: none !important;
+            }
+            body {
+                background: white;
+                color: black;
+            }
+        }
+
+        /* Accessibility: Prefers Reduced Motion */
+        @media (prefers-reduced-motion: reduce) {
+            .gate-door-left, .gate-door-right, .reveal-element, .rotating-mandala {
+                transition: none !important;
+                animation: none !important;
+            }
+            #petal-canvas {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+<body class="sandstone-texture text-espresso flex flex-col min-h-screen relative">
+
+    <!-- Canvas Floating Petals & Parallax Engine -->
+    <canvas id="petal-canvas"></canvas>
+
+    <!-- Floating Top Bar: Audio & Language Switcher -->
+    <div id="top-nav-bar" class="fixed top-4 right-4 z-50 flex items-center gap-2 no-print">
+        <!-- Soundscape Audio Toggle Button -->
+        <button id="audio-toggle-btn" onclick="toggleAudio()" class="w-10 h-10 rounded-full bg-sandstone-light/90 border border-brass backdrop-blur-md shadow-md flex items-center justify-center text-terracotta hover:text-brass transition-all duration-300 group" title="Toggle Shehnai/Sitar Music">
+            <i id="audio-icon" class="fa-solid fa-music text-xs group-hover:scale-110 transition-transform"></i>
+        </button>
+
+        <!-- Language Switcher Toggle (EN / हिंदी) -->
+        <button id="lang-toggle-btn" onclick="toggleLanguage()" class="px-3.5 py-1.5 rounded-full bg-sandstone-light/90 border border-brass backdrop-blur-md shadow-md text-xs font-semibold text-espresso hover:text-terracotta transition-all duration-300 flex items-center gap-1.5">
+            <i class="fa-solid fa-om text-xs text-brass"></i>
+            <span id="lang-label">हिंदी</span>
+        </button>
+    </div>
+
+    <!-- ==========================================
+         GATE OVERLAY: 3D JHAROKHA ARCH DOORS
+    ========================================== -->
+    <div id="gate-overlay" class="fixed inset-0 z-50 flex items-center justify-center bg-sandstone gate-perspective">
+        
+        <!-- Left Door Panel: Carved Rosewood/Sandstone with Jali -->
+        <div id="door-left" class="gate-door-left absolute top-0 left-0 w-1/2 h-full bg-gradient-to-r from-terracotta-dark via-terracotta to-[#7A3326] border-r-2 border-brass flex flex-col justify-between p-4 sm:p-6 shadow-2xl overflow-hidden">
+            <!-- Brass Jali Pattern -->
+            <div class="absolute inset-0 jali-pattern"></div>
+            <!-- Cusped Jharokha Inner Panel -->
+            <div class="h-full border-2 border-brass/40 rounded-tl-[140px] p-4 flex flex-col justify-between relative z-10">
+                <div class="w-full h-16 border-b border-brass/30"></div>
+                <!-- Peacock Ring Handle Holder -->
+                <div class="w-12 h-12 rounded-full border-2 border-brass/60 mx-auto flex items-center justify-center bg-sandstone/10">
+                    <div class="w-6 h-6 border-2 border-brass rounded-full"></div>
+                </div>
+                <div class="w-full h-24 border-t border-brass/30"></div>
+            </div>
+        </div>
+
+        <!-- Right Door Panel -->
+        <div id="door-right" class="gate-door-right absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-terracotta-dark via-terracotta to-[#7A3326] border-l-2 border-brass flex flex-col justify-between p-4 sm:p-6 shadow-2xl overflow-hidden">
+            <!-- Brass Jali Pattern -->
+            <div class="absolute inset-0 jali-pattern"></div>
+            <!-- Cusped Jharokha Inner Panel -->
+            <div class="h-full border-2 border-brass/40 rounded-tr-[140px] p-4 flex flex-col justify-between relative z-10">
+                <div class="w-full h-16 border-b border-brass/30"></div>
+                <!-- Peacock Ring Handle Holder -->
+                <div class="w-12 h-12 rounded-full border-2 border-brass/60 mx-auto flex items-center justify-center bg-sandstone/10">
+                    <div class="w-6 h-6 border-2 border-brass rounded-full"></div>
+                </div>
+                <div class="w-full h-24 border-t border-brass/30"></div>
+            </div>
+        </div>
+
+        <!-- Centered Ivory Wax Monogram Seal & Entrance Trigger -->
+        <div id="gate-seal" class="gate-seal relative z-20 flex flex-col items-center justify-center text-center p-4">
+            
+            <!-- Lord Ganesha Line Icon + Sacred Mantra -->
+            <div class="text-brass text-3xl sm:text-4xl mb-1 filter drop-shadow-md">
+                <i class="fa-solid fa-om"></i>
+            </div>
+            <p id="gate-mantra" class="text-xs font-serif text-marigold font-semibold tracking-widest uppercase mb-4 drop-shadow">
+                ॥ ॐ श्री गणेशाय नमः ॥
+            </p>
+
+            <!-- Circular Ivory Monogram Seal -->
+            <div onclick="openInvitationGate()" class="w-24 h-24 md:w-28 md:h-28 rounded-full bg-gradient-to-br from-sandstone-light via-white to-champagne border-4 border-brass shadow-2xl flex flex-col items-center justify-center cursor-pointer transform hover:scale-105 transition-all duration-300 group">
+                <div class="w-20 h-20 md:w-24 md:h-24 rounded-full border border-dashed border-brass/80 flex flex-col items-center justify-center p-1 bg-sandstone">
+                    <span id="gate-seal-monogram" class="font-serif text-xl md:text-2xl font-bold text-terracotta">R <span class="text-brass font-script">&amp;</span> S</span>
+                </div>
+            </div>
+
+            <!-- Couple Names & Subtitle -->
+            <div class="mt-4 text-center">
+                <h2 id="gate-couple-names" class="text-2xl md:text-3xl font-serif text-sandstone font-bold tracking-wider drop-shadow-md">
+                    Ranveer &amp; Sunaina
+                </h2>
+                <p id="gate-wedding-subtitle" class="text-[11px] uppercase tracking-[0.25em] text-brass-shimmer font-semibold mt-1">
+                    Royal Shubh Vivah Invitation
+                </p>
+            </div>
+
+            <!-- Softly Glowing Entrance Button -->
+            <button onclick="openInvitationGate()" class="mt-6 px-8 py-3 rounded-full bg-gradient-to-r from-brass via-brass-light to-brass-dark text-espresso font-semibold text-xs uppercase tracking-[0.25em] shadow-xl hover:brightness-110 transition-all duration-300 animate-pulse flex items-center gap-2">
+                <span data-i18n="open_invitation">Open Invitation</span>
+                <i class="fa-solid fa-envelope-open text-xs"></i>
+            </button>
+        </div>
+    </div>
+
+
+    <!-- ==========================================
+         MAIN SINGLE PAGE CONTENT (7 SECTIONS)
+    ========================================== -->
+    <main id="main-content" class="w-full max-w-4xl mx-auto px-4 sm:px-6 py-8 relative">
+
+        <!-- Background Faint Rotating Suryamandala -->
+        <div class="fixed top-12 left-1/2 -translate-x-1/2 w-[650px] h-[650px] opacity-[0.035] pointer-events-none z-0">
+            <svg class="w-full h-full text-brass fill-current rotating-mandala" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="46" fill="none" stroke="currentColor" stroke-width="0.5"/>
+                <circle cx="50" cy="50" r="36" fill="none" stroke="currentColor" stroke-width="0.4" stroke-dasharray="2 2"/>
+                <path d="M50 2 L50 98 M2 50 L98 50 M14 14 L86 86 M14 86 L86 14" stroke="currentColor" stroke-width="0.3"/>
+            </svg>
+        </div>
+
+
+        <!-- SECTION 1: HERO -->
+        <section id="hero-section" class="min-h-screen flex flex-col justify-center items-center text-center relative py-12 reveal-element">
+            
+            <!-- Fine Gold Rajasthani Jharokha Arch Frame SVG -->
+            <div class="w-full max-w-md mx-auto relative p-6 md:p-10 border-t-4 border-x-2 border-brass/50 rounded-t-[200px] bg-white/50 backdrop-blur-xs shadow-sm">
+                
+                <div class="text-terracotta text-4xl mb-2">
+                    <i class="fa-solid fa-om"></i>
+                </div>
+
+                <p data-i18n="auspicious_heading" class="text-xs uppercase tracking-[0.3em] text-terracotta font-semibold mb-2">
+                    Shubh Vivah Invitation
+                </p>
+
+                <!-- Monogram Emblem -->
+                <div class="w-16 h-16 mx-auto mb-4 rounded-full border-2 border-brass flex items-center justify-center text-terracotta font-serif text-xl font-bold bg-sandstone">
+                    <span id="hero-monogram">R&amp;S</span>
+                </div>
+
+                <!-- Couple Names Heading -->
+                <h1 id="hero-names" class="text-4xl sm:text-5xl md:text-6xl font-serif text-terracotta font-bold tracking-tight my-4 leading-tight">
+                    Ranveer Singh
+                    <span class="block text-2xl sm:text-3xl font-script text-brass my-1 font-normal">&amp;</span>
+                    Sunaina Kumari
+                </h1>
+
+                <!-- Brass Diamond & Lotus Line Art Divider -->
+                <div class="flex items-center justify-center gap-2 my-4">
+                    <div class="w-12 h-[1px] bg-brass/60"></div>
+                    <div class="w-2.5 h-2.5 rotate-45 bg-brass"></div>
+                    <div class="w-12 h-[1px] bg-brass/60"></div>
+                </div>
+
+                <!-- Date & City -->
+                <p id="hero-date" class="text-base sm:text-lg font-serif text-espresso font-semibold">
+                    Sunday, 14th December 2026
+                </p>
+                <p id="hero-city" class="text-xs uppercase tracking-[0.25em] text-brass-dark font-medium mt-1">
+                    Udaipur, Rajasthan, India
+                </p>
+
+            </div>
+
+            <!-- Scroll Cue -->
+            <a href="#blessings-section" class="mt-8 text-brass hover:text-terracotta transition-colors animate-bounce">
+                <i class="fa-solid fa-chevron-down text-lg"></i>
+            </a>
+        </section>
+
+
+        <!-- SECTION 2: BLESSINGS -->
+        <section id="blessings-section" class="py-16 text-center relative reveal-element">
+            <div class="max-w-2xl mx-auto bg-champagne/60 p-8 sm:p-12 rounded-3xl border border-brass/40 shadow-sm relative overflow-hidden">
+                
+                <div class="text-brass text-4xl mb-3">
+                    <i class="fa-solid fa-om"></i>
+                </div>
+                
+                <!-- Ganesha Vedic Shloka -->
+                <h3 id="blessings-shloka" class="text-lg sm:text-xl font-serif font-bold text-terracotta mb-2">
+                    ॥ वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ। निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा॥
+                </h3>
+
+                <div class="w-20 h-[1px] bg-brass/60 mx-auto my-4"></div>
+
+                <!-- Traditional Family Blessings Wording -->
+                <p id="blessings-text" class="text-sm sm:text-base font-serif text-espresso/90 leading-relaxed italic">
+                    "With the divine blessings of Lord Ganesha, our revered ancestors, and elders, we joyfully announce the auspicious union of Ranveer and Sunaina into the sacred bond of matrimony."
+                </p>
+                <p class="text-[11px] uppercase tracking-widest text-brass-dark mt-4 font-semibold">
+                    — The Rathore &amp; Shekhawat Families
+                </p>
+            </div>
+        </section>
+
+
+        <!-- SECTION 3: FORMAL INVITATION CARD -->
+        <section id="invitation-section" class="py-16 relative reveal-element">
+            <div class="max-w-2xl mx-auto bg-white p-8 sm:p-14 rounded-2xl border-2 border-brass/60 shadow-xl relative">
+                
+                <!-- Inner Hairline Rule with Corner Lotus Motifs -->
+                <div class="border border-dashed border-brass/50 p-6 sm:p-10 rounded-xl text-center space-y-4 relative">
+                    
+                    <span data-i18n="invitation_solicit" class="text-xs uppercase tracking-[0.25em] text-terracotta font-semibold block">
+                        Seeking Your Gracious Presence
+                    </span>
+
+                    <h3 data-i18n="invitation_request" class="text-base sm:text-lg font-serif text-espresso italic">
+                        Mrs. &amp; Mr. Vikram Singh Rathore cordially solicit the honour of your presence at the Shubh Vivah of their beloved son
+                    </h3>
+
+                    <!-- Couple Names -->
+                    <div class="py-3">
+                        <h2 id="inv-groom-name" class="text-3xl sm:text-4xl font-serif text-terracotta font-bold tracking-tight">
+                            Ranveer Singh
+                        </h2>
+                        <span class="block text-2xl font-script text-brass my-1">&amp;</span>
+                        <h2 id="inv-bride-name" class="text-3xl sm:text-4xl font-serif text-terracotta font-bold tracking-tight">
+                            Sunaina Kumari
+                        </h2>
+                    </div>
+
+                    <!-- Lineage & Family Wording -->
+                    <div class="text-xs sm:text-sm font-serif text-espresso/85 leading-relaxed space-y-2 py-3 border-t border-b border-brass/30">
+                        <p id="inv-groom-parents">
+                            Son of Mrs. Rajeshwari Devi &amp; Mr. Vikram Singh Rathore
+                        </p>
+                        <p class="text-brass font-bold">•</p>
+                        <p id="inv-bride-parents">
+                            Daughter of Mrs. Gayatri Devi &amp; Mr. Gajendra Singh Shekhawat
+                        </p>
+                    </div>
+
+                    <!-- Grandparents Blessings -->
+                    <div id="inv-grandparents" class="text-xs font-serif text-gray-500 italic">
+                        With the eternal blessings of Late Thakur Bhawani Singh Rathore &amp; Late Thakuranu Anand Kanwar
+                    </div>
+
+                    <!-- RSVP & Compliments Block -->
+                    <div class="pt-4 grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs text-espresso border-t border-brass/20">
+                        <div class="text-center sm:text-left">
+                            <span data-i18n="best_compliments" class="font-bold text-terracotta block uppercase tracking-wider text-[10px]">With Best Compliments From:</span>
+                            <p id="inv-compliments" class="mt-0.5">Rathore &amp; Shekhawat Family, Relatives &amp; Friends</p>
+                        </div>
+                        <div class="text-center sm:text-right">
+                            <span data-i18n="rsvp_contacts" class="font-bold text-terracotta block uppercase tracking-wider text-[10px]">R.S.V.P:</span>
+                            <p id="inv-rsvp-contacts" class="mt-0.5">+91 98290 12345 / +91 94140 67890</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- SECTION 4: LIVE COUNTDOWN TIMER -->
+        <section id="countdown-section" class="py-12 text-center relative reveal-element">
+            <div class="max-w-xl mx-auto bg-terracotta text-sandstone p-8 rounded-3xl shadow-xl border border-brass/50">
+                <h3 data-i18n="countdown_title" class="text-xs uppercase tracking-[0.3em] font-semibold text-marigold mb-1">
+                    Countdown To Shubh Muhurat Pheras
+                </h3>
+                <p id="countdown-status-msg" class="text-sm font-serif italic text-white/90 mb-6">
+                    Awaiting the Auspicious Celestial Hour
+                </p>
+
+                <!-- 4 Box Timer Display -->
+                <div class="grid grid-cols-4 gap-2 sm:gap-4 max-w-md mx-auto">
+                    <div class="bg-black/25 p-3 rounded-2xl border border-brass/40">
+                        <span id="cd-days" class="text-2xl sm:text-3xl font-serif font-bold text-marigold block">00</span>
+                        <span data-i18n="cd_days" class="text-[9px] sm:text-[10px] uppercase tracking-widest text-white/80">Days</span>
+                    </div>
+                    <div class="bg-black/25 p-3 rounded-2xl border border-brass/40">
+                        <span id="cd-hours" class="text-2xl sm:text-3xl font-serif font-bold text-marigold block">00</span>
+                        <span data-i18n="cd_hours" class="text-[9px] sm:text-[10px] uppercase tracking-widest text-white/80">Hours</span>
+                    </div>
+                    <div class="bg-black/25 p-3 rounded-2xl border border-brass/40">
+                        <span id="cd-mins" class="text-2xl sm:text-3xl font-serif font-bold text-marigold block">00</span>
+                        <span data-i18n="cd_mins" class="text-[9px] sm:text-[10px] uppercase tracking-widest text-white/80">Mins</span>
+                    </div>
+                    <div class="bg-black/25 p-3 rounded-2xl border border-brass/40">
+                        <span id="cd-secs" class="text-2xl sm:text-3xl font-serif font-bold text-marigold block">00</span>
+                        <span data-i18n="cd_secs" class="text-[9px] sm:text-[10px] uppercase tracking-widest text-white/80">Secs</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- SECTION 5: WEDDING FUNCTIONS TIMELINE -->
+        <section id="functions-section" class="py-16 relative reveal-element">
+            <div class="text-center mb-10">
+                <h2 data-i18n="functions_title" class="text-3xl font-serif font-bold text-terracotta">
+                    Shubh Vivah Ceremonies
+                </h2>
+                <div class="w-16 h-[1px] bg-brass/70 mx-auto mt-2"></div>
+            </div>
+
+            <!-- Vertical Gold Thread Timeline -->
+            <div id="timeline-container" class="relative pl-6 sm:pl-10 space-y-8 before:absolute before:left-2.5 sm:before:left-4 before:top-3 before:bottom-3 before:w-[2px] before:bg-gradient-to-b before:from-brass-light before:via-brass before:to-brass-dark">
+                
+                <!-- Function Cards injected via JS -->
+                <div id="functions-list-target" class="space-y-8"></div>
+
+            </div>
+        </section>
+
+
+        <!-- SECTION 6: PHOTO GALLERY LIGHTBOX -->
+        <section id="gallery-section" class="py-16 relative reveal-element">
+            <div class="text-center mb-10">
+                <h2 data-i18n="gallery_title" class="text-3xl font-serif font-bold text-terracotta">
+                    Royal Celebration Gallery
+                </h2>
+                <div class="w-16 h-[1px] bg-brass/70 mx-auto mt-2"></div>
+            </div>
+
+            <!-- Masonry Grid with Jharokha Framing -->
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                <div class="cursor-pointer overflow-hidden rounded-2xl border-2 border-brass/40 shadow-sm group" onclick="openLightbox(0)">
+                    <img src="https://placehold.co/600x800/B85D4B/FAF5EE?text=Ganesh+Sthapana" alt="Gallery Photo 1" class="w-full h-48 md:h-64 object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="cursor-pointer overflow-hidden rounded-2xl border-2 border-brass/40 shadow-sm group" onclick="openLightbox(1)">
+                    <img src="https://placehold.co/800x600/C29B58/FAF5EE?text=Haldi+Ceremony" alt="Gallery Photo 2" class="w-full h-48 md:h-64 object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="cursor-pointer overflow-hidden rounded-2xl border-2 border-brass/40 shadow-sm group" onclick="openLightbox(2)">
+                    <img src="https://placehold.co/600x800/F1E6D6/2E241F?text=Royal+Sangeet" alt="Gallery Photo 3" class="w-full h-48 md:h-64 object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="cursor-pointer overflow-hidden rounded-2xl border-2 border-brass/40 shadow-sm group" onclick="openLightbox(3)">
+                    <img src="https://placehold.co/800x600/2E241F/FAF5EE?text=Palace+Decorations" alt="Gallery Photo 4" class="w-full h-48 md:h-64 object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="cursor-pointer overflow-hidden rounded-2xl border-2 border-brass/40 shadow-sm group" onclick="openLightbox(4)">
+                    <img src="https://placehold.co/600x800/B85D4B/C29B58?text=Shubh+Pheras" alt="Gallery Photo 5" class="w-full h-48 md:h-64 object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="cursor-pointer overflow-hidden rounded-2xl border-2 border-brass/40 shadow-sm group" onclick="openLightbox(5)">
+                    <img src="https://placehold.co/800x600/F7E8D0/2E241F?text=Grand+Reception" alt="Gallery Photo 6" class="w-full h-48 md:h-64 object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+            </div>
+        </section>
+
+
+        <!-- SECTION 7: CLOSING & ACTIONS -->
+        <section id="closing-section" class="py-16 text-center relative reveal-element">
+            <div class="max-w-xl mx-auto bg-white p-8 sm:p-12 rounded-3xl border-2 border-brass/40 shadow-md">
+                <div class="text-terracotta text-4xl mb-3">
+                    <i class="fa-solid fa-om"></i>
+                </div>
+                
+                <h3 data-i18n="closing_thank_you" class="text-2xl font-serif font-bold text-terracotta mb-2">
+                    Awaiting Your Gracious Presence
+                </h3>
+                <p data-i18n="closing_subtitle" class="text-xs text-brass-dark uppercase tracking-widest mb-6 font-semibold">
+                    Rathore &amp; Shekhawat Families
+                </p>
+
+                <!-- Action Buttons: Share, WhatsApp, Copy Link, PDF -->
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8 no-print">
+                    <button onclick="shareInvitation()" class="p-3 rounded-xl bg-champagne border border-brass/40 text-terracotta hover:bg-brass hover:text-white transition-all text-xs font-semibold flex flex-col items-center justify-center gap-1">
+                        <i class="fa-solid fa-share-nodes text-base"></i>
+                        <span data-i18n="btn_share">Share</span>
+                    </button>
+                    <button onclick="shareWhatsApp()" class="p-3 rounded-xl bg-champagne border border-brass/40 text-terracotta hover:bg-emerald-700 hover:text-white transition-all text-xs font-semibold flex flex-col items-center justify-center gap-1">
+                        <i class="fa-brands fa-whatsapp text-base"></i>
+                        <span>WhatsApp</span>
+                    </button>
+                    <button onclick="copyLink()" class="p-3 rounded-xl bg-champagne border border-brass/40 text-terracotta hover:bg-brass hover:text-white transition-all text-xs font-semibold flex flex-col items-center justify-center gap-1">
+                        <i class="fa-solid fa-link text-base"></i>
+                        <span data-i18n="btn_copy">Copy Link</span>
+                    </button>
+                    <button onclick="window.print()" class="p-3 rounded-xl bg-champagne border border-brass/40 text-terracotta hover:bg-brass hover:text-white transition-all text-xs font-semibold flex flex-col items-center justify-center gap-1">
+                        <i class="fa-solid fa-file-pdf text-base"></i>
+                        <span data-i18n="btn_save_pdf">Save PDF</span>
+                    </button>
+                </div>
+
+                <!-- Back To Top Button -->
+                <button onclick="window.scrollTo({top:0, behavior:'smooth'})" class="text-xs uppercase tracking-widest text-brass-dark hover:text-terracotta transition-colors inline-flex items-center gap-2 font-semibold">
+                    <i class="fa-solid fa-arrow-up"></i>
+                    <span data-i18n="back_to_top">Back To Top</span>
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- ==========================================
+         MODALS (Invitation Video, Lightbox)
+    ========================================== -->
+
+    <!-- Invitation Video Film Modal -->
+    <div id="video-modal" class="fixed inset-0 bg-black/80 backdrop-blur-md z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-sandstone-dark border-2 border-brass rounded-2xl max-w-2xl w-full p-3 relative shadow-2xl">
+            <button onclick="closeVideoModal()" class="absolute -top-10 right-0 text-white hover:text-brass text-2xl">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="aspect-video w-full bg-espresso rounded-xl overflow-hidden flex items-center justify-center text-sandstone">
+                <div class="text-center p-6">
+                    <i class="fa-solid fa-film text-4xl text-brass mb-3"></i>
+                    <p class="font-serif text-lg">Royal Wedding Film Teaser Placeholder</p>
+                    <p class="text-xs text-brass-light mt-1">Configure film MP4/YouTube link in config.js</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Photo Lightbox Modal -->
+    <div id="lightbox-modal" class="fixed inset-0 bg-black/90 backdrop-blur-md z-50 hidden flex flex-col items-center justify-between p-4">
+        <div class="w-full flex justify-between items-center text-white px-4 pt-2">
+            <span id="lightbox-counter" class="text-xs uppercase tracking-widest text-brass">Photo 1 of 6</span>
+            <button onclick="closeLightbox()" class="text-2xl text-white hover:text-brass">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <div class="relative flex-grow flex items-center justify-center w-full max-w-3xl my-auto">
+            <button onclick="prevLightboxImage()" class="absolute left-2 text-3xl text-white/80 hover:text-brass p-2">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <img id="lightbox-img" src="" alt="Enlarged gallery photo" class="max-h-[75vh] max-w-full rounded-lg border-2 border-brass shadow-2xl object-contain">
+            <button onclick="nextLightboxImage()" class="absolute right-2 text-3xl text-white/80 hover:text-brass p-2">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+        </div>
+        <div class="pb-4"></div>
+    </div>
+
+
+    <!-- ==========================================
+         CONFIG & DATA JAVASCRIPT
+    ========================================== -->
+    <script>
+        /* =========================================================
+           WEDDING CONFIGURATION DATA
+        ========================================================= */
+        const weddingConfig = {
+            groomName: "Ranveer Singh",
+            groomShort: "Ranveer",
+            groomParents: "Son of Mrs. Rajeshwari Devi & Mr. Vikram Singh Rathore",
+            
+            brideName: "Sunaina Kumari",
+            brideShort: "Sunaina",
+            brideParents: "Daughter of Mrs. Gayatri Devi & Mr. Gajendra Singh Shekhawat",
+
+            grandparentsBlessings: "With the eternal blessings of Late Thakur Bhawani Singh Rathore & Late Thakuranu Anand Kanwar",
+            complimentsFrom: "Rathore & Shekhawat Family, Relatives & Friends",
+            rsvpContacts: "+91 98290 12345 / +91 94140 67890",
+            
+            city: "Udaipur, Rajasthan, India",
+            timezone: "Asia/Kolkata",
+            
+            // Pheras Date for Live Countdown
+            pherasDateISO: "2026-12-14T20:30:00+05:30",
+
+            // 4 Traditional Functions in Time Order
+            functions: [
+                {
+                    id: "haldi-mehendi",
+                    titleEn: "Haldi & Mehendi Utsav",
+                    titleHi: "हल्दी एवं मेहंदी उत्सव",
+                    dateTimeEn: "Saturday, 13th December 2026 • 10:00 AM Onwards",
+                    dateTimeHi: "शनिवार, 13 दिसंबर 2026 • प्रातः 10:00 बजे से",
+                    venueEn: "The Chundawat Mahal Courtyard",
+                    venueHi: "चूंडावत महल प्रांगण",
+                    addressEn: "Haridas Ji Ki Magri, Udaipur, Rajasthan 313001",
+                    addressHi: "हरिदास जी की मगरी, उदयपुर, राजस्थान 313001",
+                    dressCodeEn: "Yellow / Floral Traditional",
+                    dressCodeHi: "पीले एवं पारम्परिक वस्त्र",
+                    mapsUrl: "https://maps.google.com/?q=Udaipur+Palace+Venue",
+                    calTitle: "Ranveer & Sunaina - Haldi & Mehendi",
+                    icon: "fa-sun"
+                },
+                {
+                    id: "sangeet",
+                    titleEn: "Royal Sangeet & Ring Ceremony",
+                    titleHi: "रॉयल संगीत एवं मुद्रिका समारोह",
+                    dateTimeEn: "Saturday, 13th December 2026 • 07:00 PM Onwards",
+                    dateTimeHi: "शनिवार, 13 दिसंबर 2026 • सायं 07:00 बजे से",
+                    venueEn: "Manek Chowk Lawns, City Palace Complex",
+                    venueHi: "माणक चौक लॉन्स, सिटी पैलेस परिसर",
+                    addressEn: "Old City, Udaipur, Rajasthan 313001",
+                    addressHi: "ओल्ड सिटी, उदयपुर, राजस्थान 313001",
+                    dressCodeEn: "Indo-Western Royal Velvet",
+                    dressCodeHi: "इंडो-वेस्टर्न एवं राजशाही पोशाक",
+                    mapsUrl: "https://maps.google.com/?q=City+Palace+Udaipur",
+                    calTitle: "Ranveer & Sunaina - Sangeet & Ring Ceremony",
+                    icon: "fa-music"
+                },
+                {
+                    id: "shubh-pheras",
+                    titleEn: "Baraat Swagat & Shubh Pheras",
+                    titleHi: "बारात स्वागत एवं शुभ फेरे",
+                    dateTimeEn: "Sunday, 14th December 2026 • 06:00 PM Baraat | 08:30 PM Pheras",
+                    dateTimeHi: "रविवार, 14 दिसंबर 2026 • सायं 06:00 बारात | रात्रि 08:30 फेरे",
+                    venueEn: "Zenana Mahal, Taj Lake Palace Grounds",
+                    venueHi: "ज़नाना महल, लेक पैलेस परिसर",
+                    addressEn: "Pichola, Udaipur, Rajasthan 313001",
+                    addressHi: "पिछोला, उदयपुर, राजस्थान 313001",
+                    dressCodeEn: "Regal Rajputana Poshak / Sherwani",
+                    dressCodeHi: "राजपूती पोशाक / शेरवानी",
+                    noteEn: "Shubh Muhurat Pheras followed by Royal Dinner & Ashirwad",
+                    noteHi: "शुभ मुहूर्त फेरे पश्चात शाही प्रीतिभोज एवं आशीर्वाद",
+                    mapsUrl: "https://maps.google.com/?q=Taj+Lake+Palace+Udaipur",
+                    calTitle: "Ranveer & Sunaina - Shubh Pheras & Marriage",
+                    icon: "fa-fire",
+                    isMainPheras: true
+                },
+                {
+                    id: "reception",
+                    titleEn: "Grand Reception",
+                    titleHi: "भव्य प्रीतिभोज (रिसेप्शन)",
+                    dateTimeEn: "Monday, 15th December 2026 • 07:30 PM Onwards",
+                    dateTimeHi: "सोमवार, 15 दिसंबर 2026 • सायं 07:30 बजे से",
+                    venueEn: "Fateh Prakash Palace Ballroom",
+                    venueHi: "फतेह प्रकाश पैलेस बॉलरूम",
+                    addressEn: "Lake Pichola, Udaipur, Rajasthan 313001",
+                    addressHi: "लेक पिछोला, उदयपुर, राजस्थान 313001",
+                    dressCodeEn: "Formal Black Tie / Royal Ethnic",
+                    dressCodeHi: "फॉर्मल एथनिक एवं शामियाना पोषाक",
+                    mapsUrl: "https://maps.google.com/?q=Fateh+Prakash+Palace+Udaipur",
+                    calTitle: "Ranveer & Sunaina - Grand Reception",
+                    icon: "fa-glass-cheers"
+                }
+            ],
+
+            galleryImages: [
+                "https://placehold.co/600x800/B85D4B/FAF5EE?text=Ganesh+Sthapana",
+                "https://placehold.co/800x600/C29B58/FAF5EE?text=Haldi+Ceremony",
+                "https://placehold.co/600x800/F1E6D6/2E241F?text=Royal+Sangeet",
+                "https://placehold.co/800x600/2E241F/FAF5EE?text=Palace+Decorations",
+                "https://placehold.co/600x800/B85D4B/C29B58?text=Shubh+Pheras",
+                "https://placehold.co/800x600/F7E8D0/2E241F?text=Grand+Reception"
+            ]
+        };
+
+        /* =========================================================
+           I18N DICTIONARY (English & Hindi Devanagari)
+        ========================================================= */
+        const i18n = {
+            en: {
+                open_invitation: "Open Invitation",
+                auspicious_heading: "Shubh Vivah Invitation",
+                invitation_solicit: "Seeking Your Gracious Presence",
+                invitation_request: "Mrs. & Mr. Vikram Singh Rathore cordially solicit the honour of your presence at the Shubh Vivah of their beloved son",
+                best_compliments: "With Best Compliments From:",
+                rsvp_contacts: "R.S.V.P:",
+                countdown_title: "Countdown To Shubh Muhurat Pheras",
+                cd_days: "Days",
+                cd_hours: "Hours",
+                cd_mins: "Mins",
+                cd_secs: "Secs",
+                functions_title: "Shubh Vivah Ceremonies",
+                gallery_title: "Royal Celebration Gallery",
+                closing_thank_you: "Awaiting Your Gracious Presence",
+                closing_subtitle: "Rathore & Shekhawat Families",
+                btn_share: "Share",
+                btn_copy: "Copy Link",
+                btn_save_pdf: "Save PDF",
+                back_to_top: "Back To Top",
+                btn_directions: "Get Directions",
+                btn_add_cal: "Add to Calendar",
+                btn_watch_film: "Watch Invitation Film",
+                dress_code_label: "Dress Code:"
+            },
+            hi: {
+                open_invitation: "निमंत्रण पत्र खोलें",
+                auspicious_heading: "शुभ विवाह निमंत्रण",
+                invitation_solicit: "आपकी गरिमामयी उपस्थिति की अभिलाषा में",
+                invitation_request: "श्रीमती एवं श्री विक्रम सिंह राठौड़ अपने प्रिय सुपुत्र के शुभ विवाह अवसर पर आपको सहर्ष आमंत्रित करते हैं",
+                best_compliments: "दर्शनाभिलाषी एवं विनीत:",
+                rsvp_contacts: "आर.एस.वी.पी (संपर्क):",
+                countdown_title: "शुभ मुहूर्त फेरों का समय",
+                cd_days: "दिन",
+                cd_hours: "घंटे",
+                cd_mins: "मिनट",
+                cd_secs: "सेकंड",
+                functions_title: "मा मांगलिक कार्यक्रम",
+                gallery_title: "मांगलिक पलों की झलकियाँ",
+                closing_thank_you: "आपकी पावन उपस्थिति की प्रतीक्षा में",
+                closing_subtitle: "राठौड़ एवं शेखावत परिवार",
+                btn_share: "शेयर करें",
+                btn_copy: "लिंक कॉपी करें",
+                btn_save_pdf: "ਪੀ.ਡੀ.ਐਫ਼ / PDF सेव करें",
+                back_to_top: "ऊपर जाएं",
+                btn_directions: "मार्ग देखें (Maps)",
+                btn_add_cal: "कैलेंडर में जोड़ें",
+                btn_watch_film: "निमंत्रण फिल्म देखें",
+                dress_code_label: "पहनावा (पोशाक):"
+            }
+        };
+
+        let currentLang = 'en';
+
+        /* Check URL Hash for #bride Side Customization */
+        function checkHashRoute() {
+            if (window.location.hash === '#bride') {
+                document.getElementById('gate-seal-monogram').innerHTML = `S <span class="text-brass font-script">&amp;</span> R`;
+                document.getElementById('gate-couple-names').innerText = `${weddingConfig.brideShort} & ${weddingConfig.groomShort}`;
+                document.getElementById('hero-monogram').innerText = `S&R`;
+                document.getElementById('hero-names').innerHTML = `
+                    ${weddingConfig.brideName}
+                    <span class="block text-2xl sm:text-3xl font-script text-brass my-1 font-normal">&amp;</span>
+                    ${weddingConfig.groomName}
+                `;
+                document.getElementById('inv-groom-name').innerText = weddingConfig.brideName;
+                document.getElementById('inv-bride-name').innerText = weddingConfig.groomName;
+                document.getElementById('inv-groom-parents').innerText = weddingConfig.brideParents;
+                document.getElementById('inv-bride-parents').innerText = weddingConfig.groomParents;
+            }
+        }
+
+        /* Language Toggle Function */
+        function toggleLanguage() {
+            currentLang = currentLang === 'en' ? 'hi' : 'en';
+            document.getElementById('lang-label').innerText = currentLang === 'en' ? 'हिंदी' : 'English';
+            
+            if (currentLang === 'hi') {
+                document.body.classList.add('lang-hi');
+            } else {
+                document.body.classList.remove('lang-hi');
+            }
+
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (i18n[currentLang][key]) {
+                    el.innerText = i18n[currentLang][key];
+                }
+            });
+
+            renderFunctionsList();
+        }
+
+        /* Render Function Cards Dynamically */
+        function renderFunctionsList() {
+            const container = document.getElementById('functions-list-target');
+            container.innerHTML = '';
+
+            weddingConfig.functions.forEach(fn => {
+                const title = currentLang === 'hi' ? fn.titleHi : fn.titleEn;
+                const dateTime = currentLang === 'hi' ? fn.dateTimeHi : fn.dateTimeEn;
+                const venue = currentLang === 'hi' ? fn.venueHi : fn.venueEn;
+                const address = currentLang === 'hi' ? fn.addressHi : fn.addressEn;
+                const dressCode = currentLang === 'hi' ? fn.dressCodeHi : fn.dressCodeEn;
+                const note = fn.noteEn ? (currentLang === 'hi' ? fn.noteHi : fn.noteEn) : null;
+
+                const cardHtml = `
+                    <div class="relative bg-white rounded-2xl p-5 sm:p-6 border ${fn.isMainPheras ? 'border-2 border-brass shadow-md' : 'border-brass/40 shadow-xs'} transition-all hover:border-brass">
+                        <div class="absolute -left-[31px] sm:-left-[47px] top-5 w-6 h-6 rounded-full bg-terracotta border-2 border-brass flex items-center justify-center text-[10px] text-marigold">
+                            <i class="fa-solid ${fn.icon}"></i>
+                        </div>
+
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
+                            <h3 class="text-lg font-serif font-bold text-terracotta">${title}</h3>
+                            <span class="text-xs bg-champagne text-terracotta-dark font-semibold px-3 py-1 rounded-full border border-brass/30 w-max">${dateTime}</span>
+                        </div>
+
+                        <p class="text-xs font-semibold text-espresso mt-1">${venue}</p>
+                        <p class="text-xs text-gray-600">${address}</p>
+
+                        <div class="mt-2 text-[11px] text-brass-dark font-medium flex items-center gap-1">
+                            <i class="fa-solid fa-shirt text-brass"></i>
+                            <span>${i18n[currentLang].dress_code_label} ${dressCode}</span>
+                        </div>
+
+                        ${note ? `<div class="mt-3 text-xs text-terracotta font-serif italic bg-sandstone p-2.5 rounded-xl border border-brass/30">${note}</div>` : ''}
+
+                        <div class="flex flex-wrap gap-2 mt-4 pt-3 border-t border-brass/20">
+                            <a href="${fn.mapsUrl}" target="_blank" class="px-3 py-1.5 rounded-lg bg-sandstone border border-brass/40 text-terracotta text-xs font-medium hover:bg-brass hover:text-white transition-colors flex items-center gap-1.5">
+                                <i class="fa-solid fa-location-dot text-brass"></i>
+                                <span>${i18n[currentLang].btn_directions}</span>
+                            </a>
+                            <button onclick="downloadICS('${fn.calTitle}', '${dateTime}', '${venue}')" class="px-3 py-1.5 rounded-lg bg-sandstone border border-brass/40 text-espresso text-xs font-medium hover:bg-terracotta hover:text-white transition-colors flex items-center gap-1.5">
+                                <i class="fa-regular fa-calendar-plus text-brass"></i>
+                                <span>${i18n[currentLang].btn_add_cal}</span>
+                            </button>
+                            ${fn.isMainPheras ? `
+                                <button onclick="openVideoModal()" class="px-3 py-1.5 rounded-lg bg-brass text-espresso text-xs font-bold hover:brightness-110 transition-colors flex items-center gap-1.5 shadow-xs">
+                                    <i class="fa-solid fa-play text-[10px]"></i>
+                                    <span>${i18n[currentLang].btn_watch_film}</span>
+                                </button>
+                            ` : ''}
+                        </div>
+                    </div>
+                `;
+                container.insertAdjacentHTML('beforeend', cardHtml);
+            });
+        }
+
+
+        /* =========================================================
+           SOUNDSCAPE ENGINE & 3D GATE UNLATCHING
+        ========================================================= */
+        let audioContext = null;
+        let isAudioPlaying = false;
+        let oscillatorNodes = [];
+
+        function initSynthesizedAudio() {
+            try {
+                const AudioCtx = window.AudioContext || window.webkitAudioContext;
+                if (!AudioCtx) return;
+                audioContext = new AudioCtx();
+            } catch(e) { console.log('Audio Context unavailable'); }
+        }
+
+        function startAmbientSoundscape() {
+            if (!audioContext) initSynthesizedAudio();
+            if (!audioContext) return;
+            if (audioContext.state === 'suspended') {
+                audioContext.resume();
+            }
+
+            // Royal Indian Tanpura Drone Simulation (D + A scale harmony)
+            const freqs = [146.83, 220.00, 293.66, 440.00];
+            oscillatorNodes = freqs.map(freq => {
+                const osc = audioContext.createOscillator();
+                const gain = audioContext.createGain();
+                osc.type = 'sine';
+                osc.frequency.setValueAtTime(freq, audioContext.currentTime);
+                gain.gain.setValueAtTime(0.02, audioContext.currentTime);
+                osc.connect(gain);
+                gain.connect(audioContext.destination);
+                osc.start();
+                return { osc, gain };
+            });
+            isAudioPlaying = true;
+            document.getElementById('audio-icon').className = "fa-solid fa-pause text-xs text-brass animate-pulse";
+        }
+
+        function stopAmbientSoundscape() {
+            oscillatorNodes.forEach(node => {
+                try { node.osc.stop(); } catch(e){}
+            });
+            oscillatorNodes = [];
+            isAudioPlaying = false;
+            document.getElementById('audio-icon').className = "fa-solid fa-music text-xs";
+        }
+
+        function toggleAudio() {
+            if (isAudioPlaying) {
+                stopAmbientSoundscape();
+            } else {
+                startAmbientSoundscape();
+            }
+        }
+
+        function openInvitationGate() {
+            const gateOverlay = document.getElementById('gate-overlay');
+            gateOverlay.classList.add('gate-open');
+            startAmbientSoundscape();
+            
+            setTimeout(() => {
+                gateOverlay.style.pointerEvents = 'none';
+                gateOverlay.style.opacity = '0';
+                gateOverlay.style.transition = 'opacity 0.8s ease-out';
+                setTimeout(() => gateOverlay.style.display = 'none', 800);
+            }, 1200);
+        }
+
+        document.addEventListener('visibilitychange', () => {
+            if (document.hidden && isAudioPlaying) {
+                stopAmbientSoundscape();
+            }
+        });
+
+
+        /* =========================================================
+           CANVAS MULTI-PETAL ENGINE (3-LAYER PARALLAX)
+        ========================================================= */
+        const canvas = document.getElementById('petal-canvas');
+        const ctx = canvas.getContext('2d');
+        let width = canvas.width = window.innerWidth;
+        let height = canvas.height = window.innerHeight;
+
+        window.addEventListener('resize', () => {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+        });
+
+        const PETAL_TYPES = ['marigold_yellow', 'marigold_orange', 'red_rose', 'pink_lotus', 'gold_glitter'];
+        const particles = [];
+
+        class Petal {
+            constructor() {
+                this.reset();
+            }
+            reset() {
+                this.x = Math.random() * width;
+                this.y = -20 - Math.random() * 50;
+                this.size = Math.random() * 9 + 5;
+                this.speedY = Math.random() * 1.6 + 0.7;
+                this.speedX = Math.random() * 0.8 - 0.4;
+                this.rotation = Math.random() * 360;
+                this.rotSpeed = Math.random() * 2 - 1;
+                this.type = PETAL_TYPES[Math.floor(Math.random() * PETAL_TYPES.length)];
+                this.opacity = Math.random() * 0.65 + 0.35;
+                this.depthLayer = Math.random() > 0.5 ? 2 : 1;
+            }
+            update(wind) {
+                this.y += this.speedY * (this.depthLayer === 2 ? 1.35 : 0.85);
+                this.x += this.speedX + wind;
+                this.rotation += this.rotSpeed;
+
+                if (this.y > height + 20) {
+                    this.reset();
+                }
+            }
+            draw() {
+                ctx.save();
+                ctx.translate(this.x, this.y);
+                ctx.rotate((this.rotation * Math.PI) / 180);
+                ctx.globalAlpha = this.opacity;
+
+                if (this.type === 'marigold_yellow') {
+                    ctx.fillStyle = '#F5B041';
+                    ctx.beginPath();
+                    ctx.arc(0, 0, this.size * 0.5, 0, Math.PI * 2);
+                    ctx.fill();
+                } else if (this.type === 'marigold_orange') {
+                    ctx.fillStyle = '#E67E22';
+                    ctx.beginPath();
+                    ctx.arc(0, 0, this.size * 0.55, 0, Math.PI * 2);
+                    ctx.fill();
+                } else if (this.type === 'red_rose') {
+                    ctx.fillStyle = '#B85D4B';
+                    ctx.beginPath();
+                    ctx.ellipse(0, 0, this.size, this.size * 0.6, 0, 0, Math.PI * 2);
+                    ctx.fill();
+                } else if (this.type === 'pink_lotus') {
+                    ctx.fillStyle = '#F1D9D7';
+                    ctx.beginPath();
+                    ctx.ellipse(0, 0, this.size * 1.1, this.size * 0.5, 0, 0, Math.PI * 2);
+                    ctx.fill();
+                } else {
+                    ctx.fillStyle = '#C29B58';
+                    ctx.beginPath();
+                    ctx.arc(0, 0, 2.2, 0, Math.PI * 2);
+                    ctx.fill();
+                }
+                ctx.restore();
+            }
+        }
+
+        for (let i = 0; i < 38; i++) {
+            particles.push(new Petal());
+        }
+
+        let lastScrollY = window.scrollY;
+        let windFactor = 0;
+
+        window.addEventListener('scroll', () => {
+            const currentScrollY = window.scrollY;
+            windFactor = (currentScrollY - lastScrollY) * 0.05;
+            lastScrollY = currentScrollY;
+        });
+
+        function animatePetals() {
+            ctx.clearRect(0, 0, width, height);
+            windFactor *= 0.94;
+
+            particles.forEach(p => {
+                p.update(windFactor);
+                p.draw();
+            });
+
+            requestAnimationFrame(animatePetals);
+        }
+        animatePetals();
+
+
+        /* =========================================================
+           LIVE COUNTDOWN TIMER TO SHUBH PHERAS
+        ========================================================= */
+        function updateCountdown() {
+            const eventTime = new Date(weddingConfig.pherasDateISO).getTime();
+            const now = new Date().getTime();
+            const diff = eventTime - now;
+
+            const daysEl = document.getElementById('cd-days');
+            const hoursEl = document.getElementById('cd-hours');
+            const minsEl = document.getElementById('cd-mins');
+            const secsEl = document.getElementById('cd-secs');
+            const statusMsg = document.getElementById('countdown-status-msg');
+
+            if (diff <= 0) {
+                if (diff > -10800000) {
+                    statusMsg.innerText = "The Shubh Pheras Ceremony is Happening Now! 🙏";
+                } else {
+                    statusMsg.innerText = "Blessed Union Completed! Thank You for Your Blessings.";
+                }
+                daysEl.innerText = "00";
+                hoursEl.innerText = "00";
+                minsEl.innerText = "00";
+                secsEl.innerText = "00";
+                return;
+            }
+
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const secs = Math.floor((diff % (1000 * 60)) / 1000);
+
+            daysEl.innerText = String(days).padStart(2, '0');
+            hoursEl.innerText = String(hours).padStart(2, '0');
+            minsEl.innerText = String(mins).padStart(2, '0');
+            secsEl.innerText = String(secs).padStart(2, '0');
+        }
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+
+        /* =========================================================
+           SCROLL REVEAL OBSERVER
+        ========================================================= */
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.12 });
+
+        document.querySelectorAll('.reveal-element').forEach(el => observer.observe(el));
+
+
+        /* =========================================================
+           MODALS, GALLERY & UTILITIES
+        ========================================================= */
+        function openVideoModal() {
+            document.getElementById('video-modal').classList.remove('hidden');
+        }
+        function closeVideoModal() {
+            document.getElementById('video-modal').classList.add('hidden');
+        }
+
+        let currentImageIdx = 0;
+        function openLightbox(idx) {
+            currentImageIdx = idx;
+            document.getElementById('lightbox-img').src = weddingConfig.galleryImages[idx];
+            document.getElementById('lightbox-counter').innerText = `Photo ${idx + 1} of ${weddingConfig.galleryImages.length}`;
+            document.getElementById('lightbox-modal').classList.remove('hidden');
+        }
+        function closeLightbox() {
+            document.getElementById('lightbox-modal').classList.add('hidden');
+        }
+        function prevLightboxImage() {
+            currentImageIdx = (currentImageIdx - 1 + weddingConfig.galleryImages.length) % weddingConfig.galleryImages.length;
+            openLightbox(currentImageIdx);
+        }
+        function nextLightboxImage() {
+            currentImageIdx = (currentImageIdx + 1) % weddingConfig.galleryImages.length;
+            openLightbox(currentImageIdx);
+        }
+
+        function shareInvitation() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Ranveer & Sunaina Royal Shubh Vivah Invitation',
+                    text: 'We cordially invite you to the wedding celebrations of Ranveer Singh & Sunaina Kumari in Udaipur.',
+                    url: window.location.href
+                }).catch(() => {});
+            } else {
+                copyLink();
+            }
+        }
+        function shareWhatsApp() {
+            const text = encodeURIComponent(`We cordially invite you to the Shubh Vivah of Ranveer Singh & Sunaina Kumari in Udaipur.\n${window.location.href}`);
+            window.open(`https://api.whatsapp.com/send?text=${text}`, '_blank');
+        }
+        function copyLink() {
+            navigator.clipboard.writeText(window.location.href);
+            alert('Invitation link copied to clipboard!');
+        }
+
+        function downloadICS(title, dateTime, location) {
+            const icsContent = `BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Rajasthani Shubh Vivah Invitation//EN
+BEGIN:VEVENT
+SUMMARY:${title}
+DESCRIPTION:Royal Wedding Celebrations of Ranveer & Sunaina
+LOCATION:${location}
+END:VEVENT
+END:VCALENDAR`;
+            const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8;' });
+            const link = document.createElement('a');
+            link.href = window.URL.createObjectURL(blob);
+            link.setAttribute('download', `${title.replace(/\s+/g, '_')}.ics`);
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeVideoModal();
+                closeLightbox();
+            }
+            if (e.key === 'ArrowLeft') prevLightboxImage();
+            if (e.key === 'ArrowRight') nextLightboxImage();
+        });
+
+        window.addEventListener('DOMContentLoaded', () => {
+            checkHashRoute();
+            renderFunctionsList();
+        });
+        window.addEventListener('hashchange', checkHashRoute);
+    </script>
+</body>
+</html>
